@@ -10,13 +10,22 @@
         <link id="theme"rel="stylesheet" type="text/css" href="css/green.css"/>
         <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!--Slider-->
+        <!--JQuery UI-->
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+        <!--Plugin validacion-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" ></script>
+        <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+        <!--Slider
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        -->
         <!--Scripts-->
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+       <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/es.min.js"></script>
+        -->
     </head>
     <body>
         <div id="selector-theme">
@@ -40,19 +49,31 @@
                     </ul>
                 </nav>
             </header>
-            <!--Slider-->
-            <div id="slider">
-                <div class="bxslider">
-                    <div><img src="img/cafe.jpg" title="Coffe" ></div>
-                    <div><img src="img/cafe1.jpg" title="Coffe"></div>
-                    <div><img src="img/cafe2.jpg" title="Coffe"></div>
-                  </div>
-            </div>
             <!--Contenido-->
             <section id="content">
-                <div id="posts">
+                <div id="box">
                         
-                        <!--Carga de posts desde json-->
+                        <!--Carga Contacto-->
+                        <h2>Contacto</h2>
+                        <form action="#" id="contact" method="POST">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" required>
+                            <label for="surname">Apellido</label>
+                            <input type="text" name="surname" required>
+                            <label for="correo">Email</label>
+                            <input type="email" name="email" required>
+                            <label for="sex">Sexo</label>
+                            <select name="sex">
+                                <option value="hombre">Hombre</option>
+                                <option value="mujer">Mujer</option>
+                            </select>
+                            <label for="date">Fecha de Nacimiento</label>
+                            <input type="number" name="date" required>
+                            <label for="age">Edad</label>
+                            <input type="number" name="age" required>
+                            <input type="submit" name="submit" value="Enviar" required>
+
+                        </form>
                 </div>
                 <aside id="sidebar">
                     <div id="about">

@@ -10,13 +10,20 @@
         <link id="theme"rel="stylesheet" type="text/css" href="css/green.css"/>
         <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!--Slider-->
+        <!--JQuery UI-->
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+        <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+        <!--Slider
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        -->
         <!--Scripts-->
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+       <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/es.min.js"></script>
+        -->
     </head>
     <body>
         <div id="selector-theme">
@@ -40,19 +47,32 @@
                     </ul>
                 </nav>
             </header>
-            <!--Slider-->
-            <div id="slider">
-                <div class="bxslider">
-                    <div><img src="img/cafe.jpg" title="Coffe" ></div>
-                    <div><img src="img/cafe1.jpg" title="Coffe"></div>
-                    <div><img src="img/cafe2.jpg" title="Coffe"></div>
-                  </div>
-            </div>
             <!--Contenido-->
             <section id="content">
-                <div id="posts">
+                <div id="box">
                         
-                        <!--Carga de posts desde json-->
+                        <!--Carga Acordeon-->
+                        <h2>Sobre Nosotros</h2>
+                        <div id="acordeon">
+                            <h3>¿Quiénes Somos?</h3>
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptate magnam laborum asperiores similique incidunt, inventore, exercitationem unde adipisci dignissimos dolores doloremque. Esse ipsam rem provident omnis excepturi aliquam dolor.
+                                </p>
+                            </div>
+                            <h3>Nuestros Servios</h3>
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptate magnam laborum asperiores similique incidunt, inventore, exercitationem unde adipisci dignissimos dolores doloremque. Esse ipsam rem provident omnis excepturi aliquam dolor.
+                                </p>
+                            </div>
+                            <h3>Nuestros Clientes</h3>
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptate magnam laborum asperiores similique incidunt, inventore, exercitationem unde adipisci dignissimos dolores doloremque. Esse ipsam rem provident omnis excepturi aliquam dolor.
+                                </p>
+                            </div>
+                        </div>
                 </div>
                 <aside id="sidebar">
                     <div id="about">

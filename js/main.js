@@ -1,14 +1,16 @@
 $(document).ready(function(){
     //Slider
+    if(window.location.href.indexOf('index') > -1){
     $('.bxslider').bxSlider({
         mode: 'fade',
         captions: true,
         slideWidth: 1200,
         infiniteLoop: true
       });
+    }
 
       //Post
-
+      if(window.location.href.indexOf('index') > -1){
       var posts = [
       {
         title: 'Prueba de titulo 1',
@@ -37,6 +39,7 @@ $(document).ready(function(){
       },
 
       ];
+      //Cargar Posts
       posts.forEach((item, index)=>{
         var post = `
         <article class="post">
@@ -50,7 +53,62 @@ $(document).ready(function(){
         `;
         $("#posts").append(post);
       })
+    }
+      //Seleccionar tema
+      var theme = $("#theme");
+      $("#to-green").click(function(){
+        theme.attr("href","css/green.css");
+      });
+      $("#to-blue").click(function(){
+        theme.attr("href","css/blue.css");
+      });
+      $("#to-red").click(function(){
+        theme.attr("href","css/red.css");
+      });
+      //Subir suavizado
+      $('.subir').click(function(e){
+        e.preventDefault();
 
-      
+        $('html, body').animate({
+          scrollTop: 0
+        }, 1000);
+        return false;
+      });
+      //Login falso
+      $("#login form").submit(function(){
+        var form_name= $("#name").val();
+        localStorage.setItem("form_name",form_name);
+        location.reload();
+      })
+
+      var form_name = localStorage.getItem("form_name");
+      if(form_name != null && form_name != undefined)
+      {
+        var about_p =  $("#about p");
+        about_p.html("<br><hr><br><Strong>Bienvenido, " + form_name + "</Strong> ");
+        about_p.append("<br><a href='#' id = 'logout'>Cerrar sesión </a>");
+        $("#login").hide();
+        $("#logout").click(function(){
+          localStorage.clear();
+          location.reload();
+        });
+      }
+      //Acordeon
+      if(window.location.href.indexOf('About') > -1){
+        $('#acordeon').accordion();
+      }
+        //Reloj
+      if(window.location.href.indexOf('reloj') > -1){
+        
+        setInterval(function(){
+          var reloj = moment().format('h:mm:ss a');
+          $('#reloj').html(reloj);
+        },1000);
+        
+      }
+      if(window.location.href.indexOf('contact') > -1){
+        
+      $('#contact').validate();
+      }
       
 })
